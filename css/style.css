@@ -1,0 +1,148 @@
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#dddddd;
+    background-image: url("/img/checker.png");
+}
+
+
+
+main{
+    height: 100%;
+    width: 70%;
+    min-width: 400px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    
+    vertical-align: middle;
+
+    
+    background-color: white;
+}
+
+header{
+    width: 100%;
+    min-width: inherit;
+    max-width:inherit;
+    height: 60px;
+    float:inline-start;
+    
+    /*max-height: 10%;*/
+    color: white;
+    background-color:#2D2D2D;
+}
+
+footer{
+    width: 100%;
+
+    color: white;
+    background-color: #2d2d2d;
+}
+
+
+.sticky
+{
+    position: fixed;
+    min-width: inherit;
+    max-width: inherit;
+    top: 0;
+}
+
+
+main{
+    padding-top: 60px;
+}
+
+
+.greetdiv{
+    font-size: 5em;
+    color:ivory;
+    width: 100%;
+    height: 500px;
+    background-color: #545454;
+}
+
+.greetdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    max-width: 1000px;
+    min-width: 1000px;
+    margin: auto;
+    padding: 10px;
+}
+
+
+
+.Block{
+    width: 100%;
+    font-size: 2em;
+    padding: 1em;
+    font-size: 1.1em;
+    display: block;
+    overflow: hidden;
+}
+
+.Text{
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+
+.BlockButton{
+    
+    float:right;
+    color: #ffffff;
+    background-color: #2d2d2d;
+
+}
+
+.ttt{
+    display: table-cell;
+
+}
+
+
+
+/*
+unusable
+*/
+.square{
+    width: 20%;
+    
+    background-color: green;
+    display: inline-block;
+    /*
+    
+    height: 20%;
+    */
+}
+.square:after{
+    content:"";
+    display: block;
+    padding-bottom:100%;
+    
+}
+
+.wrapper{
+    align-items: center;
+    display: flex;
+}
+
+
