@@ -21,8 +21,8 @@ body{
 main{
     height: 100%;
     width: 70%;
-    min-width: 400px;
-    max-width: 900px;
+    min-width: 900px;
+    max-width: 1020px;
     margin: 0 auto;
 
     
@@ -32,13 +32,12 @@ main{
     background-color: white;
 }
 
-header{
+.header{
     width: 100%;
     min-width: inherit;
     max-width:inherit;
     height: 60px;
-    float:inline-start;
-    
+    float:inline-end;
     /*max-height: 10%;*/
     color: white;
     background-color:#2D2D2D;
@@ -54,16 +53,12 @@ footer{
 
 .sticky
 {
-    position: fixed;
+    position: sticky;
     min-width: inherit;
     max-width: inherit;
     top: 0;
 }
 
-
-main{
-    padding-top: 60px;
-}
 
 
 .greetdiv{
@@ -91,9 +86,8 @@ main{
 
 .Block{
     width: 100%;
-    font-size: 2em;
+    font-size: 1em;
     padding: 1em;
-    font-size: 1.1em;
     display: block;
     overflow: hidden;
 }
@@ -108,6 +102,10 @@ main{
 .BlockButton{
     
     float:right;
+    width: 100px;
+    max-width: 100px;
+    height: 25px;
+    max-height: 25px;
     color: #ffffff;
     background-color: #2d2d2d;
 
