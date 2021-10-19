@@ -116,6 +116,13 @@ footer{
 }
 
 
+.BlockImage{
+    
+}
+
+
+
+
 
 
 .BlockButton{
@@ -136,7 +143,18 @@ footer{
 
     color: #ffffff;
     background-color: #2d2d2d;
+    transition-duration: 0.25s;
+}
 
+.BlockButton:hover{
+    background-color: #d2d2d2;
+    color: black;
+    
+}
+
+.BlockButton:after{
+    color: #ffffff;
+    background-color: red;
 }
 
 .ttt{
