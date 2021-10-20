@@ -20,9 +20,12 @@ body{
 
 main{
     height: 100%;
-    width: 70%;
+    /*width: 80%;
+
     min-width: 900px;
-    max-width: 1020px;
+    max-width: 900px;
+    */
+    width: 1080px;
     margin: 0 auto;
 
     
@@ -30,18 +33,37 @@ main{
 
     
     background-color: white;
+    z-index: 4;
 }
+
+
 
 .header{
     width: 100%;
     min-width: inherit;
-    max-width:inherit;
-    height: 60px;
-    float:inline-end;
-    /*max-height: 10%;*/
+    max-width: inherit;
+    /*height: 60px;*/
+
+    
     color: white;
     background-color:#2D2D2D;
+    overflow:auto;
+    z-index: 1;
 }
+
+.header ul{
+    /*display: inline-flex;*/
+    align-content: center;
+}
+.header #mobile-links, #hamburger {
+    display: none;
+}
+
+#mobile-links {
+    
+}
+
+
 
 footer{
     width: 100%;
@@ -67,13 +89,13 @@ footer{
     width: 100%;
     height: 500px;
     background-color: #545454;
-}
 
-.greetdiv{
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .content{
     max-width: 1000px;
@@ -83,14 +105,11 @@ footer{
 }
 
 
-
 .Block{
     width: 100%;
     font-size: 1em;
     
-    padding: 1em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em 1em 2em 1em;
     
     /*
     padding-left: 1em;
@@ -100,7 +119,11 @@ footer{
     */
     display: block;
     overflow: hidden;
+    justify-content: space-between;
     
+}
+.Block p{
+    padding: 1em 0 1em 0;
 }
 
 .TextBlock{
@@ -112,6 +135,7 @@ footer{
 .h1Block{
     font-size: 2em;
     font-weight: 500;
+    line-height: 1em;
     padding-bottom: 0.75em;
 }
 
@@ -131,6 +155,9 @@ footer{
     padding: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    user-select: none;
+
+
     /*margin: 0em;
     /*
     width: 100px;
@@ -143,7 +170,7 @@ footer{
 
     color: #ffffff;
     background-color: #2d2d2d;
-    transition-duration: 0.25s;
+    transition-duration: 0.2s;
 }
 
 .BlockButton:hover{
@@ -190,3 +217,22 @@ unusable
 }
 
 
+@media screen and (max-width:1100px){
+    body{
+        background: #ffffff none;
+        margin:0;
+    }
+    .header #desktop-links{display: none;}
+    .header #hamburger{display:inline;}
+    main{
+        width:100%;
+        
+    }
+    img {display: block; margin: 0 auto;}
+    
+}
+
+@media screen and (min-width:1101px)
+{
+    .header #mobile-links{display: none;}
+}
