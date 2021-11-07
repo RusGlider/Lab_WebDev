@@ -1,3 +1,14 @@
+/*
+TODO
+В хэдере картинка "Домой" не влезает
+Сделать все элементы в хэдере под высоту
+
+Сделать втор. страницы для всех оставшихся блоков
+
+
+
+*/
+
 html{
     box-sizing: border-box;
 }
@@ -19,6 +30,7 @@ body{
 
 
 main{
+    transition-duration: 0.1s;
     height: 100%;
     /*width: 80%;
 
@@ -30,20 +42,31 @@ main{
 
     
     vertical-align: middle;
-
-    
     background-color: white;
     z-index: 4;
 }
-
+img
+{
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    max-width: inherit;
+    max-height: inherit;
+}
+iframe
+{
+    display: block;
+    width: 70%;
+}
 
 
 .header{
     width: 100%;
     min-width: inherit;
     max-width: inherit;
-    /*height: 60px;*/
+    align-content: left;
 
+    max-height: 32px;
     
     color: white;
     background-color:#2D2D2D;
@@ -55,8 +78,13 @@ main{
     /*display: inline-flex;*/
     align-content: center;
 }
+
+.header a img{
+    object-fit: contain;
+}
+
 .header #mobile-links, #hamburger {
-    display: none;
+    /*display: none;*/
 }
 
 #mobile-links {
@@ -67,9 +95,14 @@ main{
 
 footer{
     width: 100%;
-
+    display: table;
     color: white;
     background-color: #2d2d2d;
+}
+footer .Block{
+    overflow: auto;
+    display: inline-block;
+    width: auto;
 }
 
 
@@ -85,10 +118,12 @@ footer{
 
 .greetdiv{
     font-size: 5em;
+
     color:ivory;
     width: 100%;
     height: 500px;
     background-color: #545454;
+
 
     overflow: hidden;
     display: flex;
@@ -136,7 +171,14 @@ footer{
     font-size: 2em;
     font-weight: 500;
     line-height: 1em;
-    padding-bottom: 0.75em;
+    padding-bottom: 0.25em;
+}
+
+.h2Block{
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1em;
+    padding-bottom: 0.25em;
 }
 
 
@@ -144,19 +186,35 @@ footer{
     
 }
 
+input[type=text] {
+    border: 2px solid #D2D2D2;
+    height: 50px;
+    max-height: 40px;
+}
 
+.left{
+    float: left;
+}
 
+.Home{
+    float: left;
+    max-height: inherit;
+    margin:0 auto;
+}
 
+.right{
+    float: right;
+}
 
 
 .BlockButton{
-    
-    float:right;
     padding: 1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     user-select: none;
-
+    text-decoration: none;
+    height: inherit;
+    height: inherit;
 
     /*margin: 0em;
     /*
@@ -184,38 +242,32 @@ footer{
     background-color: red;
 }
 
-.ttt{
-    display: table-cell;
 
+
+
+
+#desktop-links{
+    float: right;
+    display: table-row;
 }
 
-
-
-/*
-unusable
-*/
-.square{
-    width: 20%;
-    
-    background-color: green;
-    display: inline-block;
-    /*
-    
-    height: 20%;
-    */
+#contacts{
+    float:right;
 }
-.square:after{
-    content:"";
+#contacts .Block{
     display: block;
-    padding-bottom:100%;
-    
+}
+#contacts li{
+    display: inline;
 }
 
-.wrapper{
-    align-items: center;
-    display: flex;
-}
 
+
+
+@media screen and (min-width:1101px)
+{
+    /*.header #mobile-links{display: none;}*/
+}
 
 @media screen and (max-width:1100px){
     body{
@@ -223,16 +275,24 @@ unusable
         margin:0;
     }
     .header #desktop-links{display: none;}
-    .header #hamburger{display:inline;}
+    /*.header #hamburger{display:inline;}*/
     main{
         width:100%;
-        
     }
     img {display: block; margin: 0 auto;}
-    
+    h1 {text-align: center;}
+    .greetdiv {    font-size: 7.25vw;}
 }
 
-@media screen and (min-width:1101px)
+@media screen and (max-width:520px)
 {
-    .header #mobile-links{display: none;}
+    body{
+        font-size: 4vw;
+    }
+    img {max-width: 75vw;}
+    .greetdiv {max-height: 100vw;}
+    footer .Block{
+        display: block;
+    }
+    #contacts{ float:none;}
 }
