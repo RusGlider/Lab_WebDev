@@ -335,9 +335,16 @@ form > *{
 
 #contacts{
     float:right;
+    
 }
 #contacts .Block{
     display: block;
+}
+#contacts img{
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    float:left;
 }
 #contacts li{
     display: inline;
