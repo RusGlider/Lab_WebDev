@@ -36,47 +36,41 @@
             <p>Приветствие</p>
         </div>
         <header id="stickyheader">
-            <a class="BlockButton" href="#post1">якорь</a>
-            <a class="BlockButton" href="#post2">якорь</a>
-            <a class="BlockButton" href="#post3">якорь</a>
-            <a class="BlockButton" href="#post4">якорь</a>
-            <a class="BlockButton" href="#post5">якорь</a>
-            <a class="BlockButton" href="#post6">якорь</a>
+            <a class="BlockButton" href="#post1">Текст</a>
+            <a class="BlockButton" href="#post2">Картинка</a>
+            <a class="BlockButton" href="#post3">Текст2</a>
+            <a class="BlockButton" href="#post4">Галерея</a>
+            <a class="BlockButton" href="#post5">Карта</a>
+            <a class="BlockButton" href="#post6">Связь</a>
 
         </header>
         <a name="post1"></a>
         <div class="Block TextBlock">
             
-            <h1 class = "h1Block">Заголовок Текстового блока</h1>
+            <h1 class = "h1Block">Текстовый блок</h1>
             <p>
                 Абзац текстового блока. Много-много текста.
-                <br>Вот он - 
-                <br>Настоящий пельмень.
-                <br>В нём много-много мяса,
-                <br>Мало теста.
+                Отличие этого текстового блока в том, что у него нет полноценной второстепенной страницы.
             </p>
-            <a href="post/post1.html" class="BlockButton right">Перейти</a>
         </div>
         <a name="post2"></a>
         <div class="Block TextBlock">
-            <h1 class = "h1Block">Заголовок блока с картинкой</h1>
+            <h1 class = "h1Block">Блок с картинкой</h1>
+            <p>Текст над картинкой.</p>
             <img src="img/im_1x1.png">
             <p>
-                Абзац текстового блока. Много-много текста. Очень-очень много текста. Настолько много текста, что аж становится завидно: а не потомок ли Толстого писал сии тексты?
+                Абзац текстового блока. Много-много текста. Очень-очень много текста. Настолько много текста, что аж становится завидно: а не потомок ли Толстого писал этот текст?
             </p>
             <a href="post/post2.html" class="BlockButton right">Перейти</a>
         </div>
         <a name="post3"></a>
         <div class="Block TextBlock">
-            <h1 class = "h1Block">Заголовок Текстового блока</h1>
+            <h1 class = "h1Block">Текстовый блок</h1>
             <p>
                 Абзац текстового блока. Много-много текста.
-                <br>Вот он - 
-                <br>Настоящий пельмень.
-                <br>В нём много-много мяса,
-                <br>Мало теста.
+                Присутствует ссылка на второстепенную страницу с дополнительной информацией.
             </p>
-            <button class="BlockButton right">Перейти</button>
+            <a href="post/post1.html" class="BlockButton right">Перейти</a>
         </div>
         <a name="post4"></a>
         <div class="Block TextBlock">
@@ -115,47 +109,51 @@
         <a name="post6"></a>
         <div class ="Block">
             <h1 class = "h1Block">Обратная связь</h1>
-            <p>Напишите нам свои пожелания и жалобы, чтобы мы могли улучшить качество вашей работы с сайтом.</p>
-            <form>
-                <input type="text" id="fname" name="firstname" placeholder="Имя">
-                <input type="text" id="fmail" name="email" placeholder="Почта"> 
-                <!--<input type="text" id="fmain" name="maintext" placeholder="Сообщение"> -->
+            <label><p>Напишите нам свои пожелания и жалобы, чтобы мы могли улучшить качество вашей работы с сайтом.</p></label>
+            <form action="#" id="form" class="form_body">
+                <input type="text" id="form_name" name="name" placeholder="Имя*" class="_req">
+                <input type="text" id="form_mail" name="email" placeholder="E-mail*" class = "_req _email">
                 <textarea id="fmain" name="maintext" placeholder="Сообщение"></textarea>
-                <input type="submit" value="Отправить"> 
+                <div>
+                    <input id = "form_agreement" checked type="checkbox" name="agreement" class="checkbox_label _req">
+                    <label for="form_agreement"><span> Я даю своё согласие на обработку персональных данных в соответствии с <a href="">Условиями</a>*</span></label>
+                </div>
+                <button type="submit" class="BlockButton submit">Отправить</button>
             </form>
         </div>
         
         <footer name="footer">
             <div class="Block">
                 <h1 class = "h2Block">Главная</h1>
-                <ul>
-                    <li><a href="#post1">Якорь1</a></li>
-                    <li><a href="#post2">Якорь2</a></li>
-                    <li><a href="#post3">Якорь3</a></li>
-                    <li><a href="#post4">Якорь4</a></li>
-                    <li><a href="#post5">Якорь5</a></li>
-                    <li><a href="#post6">Якорь6</a></li>
-                </ul>
-            </div>
-            <div class="Block">
-                ...
+            
+                <p><a href="#post1">Якорь1</a></p>
+                <p><a href="#post2">Якорь2</a></p>
+                <p><a href="#post3">Якорь3</a></p>
+                <p><a href="#post4">Якорь4</a></p>
+                <p><a href="#post5">Якорь5</a></p>
+                <p><a href="#post6">Якорь6</a></p>
+            
             </div>
             <div class="Block" id="contacts">
                 <div class="Block">
                     <h1 class="h2Block">Контакты</h1>
-                    
-                    <p><img src="img/phone.png"> +8 (800) 555-35-35</p>
-                    <p><img src="img/phone.png"> RogaIKopiyta@bk.ru</p>
-                    <p><img src="img/phone.png"> Ул. Пушкина, Дом Колотушкина</p>
+                    <div><img src="/img/phone.png">+8 (800) 555-35-35</div>
+                    <p><img src="/img/mail.png">  RogaIKopiyta@bk.ru</p>
+                    <p><img src="/img/pos.png">  Ул. Пушкина, Дом Колотушкина</p>
                 </div>
                 <div class = "Block">
                     <h1 class="h2Block">Мы в соцсетях</h1>
+                    <a><img src="/img/placeholder_x32.png"></a>
+                    <a><img src="/img/placeholder_x32.png"></a>
+                    <a><img src="/img/placeholder_x32.png"></a>
+                    <a><img src="/img/placeholder_x32.png"></a>
+                    <a><img src="/img/placeholder_x32.png"></a>
                 </div>
             </div>
 
         </footer>
     </main>
-    
+    <script src="js/script_form.js"></script>
     <script>
         //Скрипт для липкого хэдера https://www.w3schools.com/howto/howto_js_sticky_header.asp
         window.onscroll = function() {StickyHeaderScrollFunction()};

@@ -158,7 +158,7 @@ footer ul > *{
     height: 500px;
     background-color: #545454;
 
-    box-shadow: inset 0 0 25px #2d2d2d;
+    box-shadow: inset 0 0 15px #2d2d2d;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -178,7 +178,7 @@ footer ul > *{
     width: 100%;
     font-size: 1em;
     
-    padding: 2em 1em 2em 1em;
+    padding: 1.5em 1em 1.5em 1em;
     
     /*
     padding-left: 1em;
@@ -191,7 +191,7 @@ footer ul > *{
     justify-content: space-between;
     
 }
-.Block p{
+.Block p label{
     padding: 1em 0 1em 0;
 }
 
@@ -280,11 +280,23 @@ textarea{
     
 }
 
+.BlockButton:active{
+    color: #ffffff;
+    background-color: #2d2d2d;
+}
+
 .BlockButton:after{
     color: #ffffff;
     background-color: red;
 }
 
+
+.submit{
+    min-width: 100%;
+    min-height: 3em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
 
 div.ScrollableBlock{
     padding: 1em;
@@ -313,11 +325,20 @@ form > *{
     margin-bottom: 1em;
 }
 
+input._error{
+    box-shadow: 0 0 15px red;
 
-#fname{
+}
+
+/*
+.checkbox_label::before{
+    height: 24px;
+}
+*/
+#form_name{
     float:left;
 }
-#fmail{
+#form_mail{
     float: left;
 }  
 #fmain{
@@ -340,14 +361,15 @@ form > *{
 #contacts .Block{
     display: block;
 }
-#contacts img{
-    margin: 0 auto;
-    display: block;
+#contacts p img{
+    max-height: 24px;
+    max-width: 24px;
+    margin: 0 0.5em 0 0.5em;
     text-align: left;
     float:left;
 }
-#contacts li{
-    display: inline;
+#contacts a img {
+    display: inline-block;
 }
 
 
@@ -389,7 +411,7 @@ form > *{
 
     footer .Block{
         display: block;
-        
+        text-align: center;
     }
     #contacts{ float:none;}
 }
